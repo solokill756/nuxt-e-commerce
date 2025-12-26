@@ -1,0 +1,118 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Dell XPS 13",
+      "description": "Laptop mỏng nhẹ, hiệu năng cao với bộ xử lý Intel Core i7",
+      "price": 1299.99,
+      "imageUrl": "https://cdn-demo.algolia.com/bestbuy-0118/4912200_sb.jpg",
+      "categoryId": 1,
+      "brandId": 1,
+      "freeShipping": true,
+      "rating": 4.5,
+      "reviewCount": 128,
+      "sku": "DELL-XPS-13-001",
+      "stock": 15
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15 Pro",
+      "description": "Điện thoại thông minh mới nhất của Apple với màn hình OLED",
+      "price": 999.99,
+      "imageUrl": "https://cdn-demo.algolia.com/bestbuy-0118/4837110_sb.jpg",
+      "categoryId": 2,
+      "brandId": 2,
+      "freeShipping": true,
+      "rating": 4.8,
+      "reviewCount": 256,
+      "sku": "APPLE-IP15-001",
+      "stock": 30
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S24",
+      "description": "Điện thoại Android với camera chất lượng cao",
+      "price": 899.99,
+      "imageUrl": "https://cdn-demo.algolia.com/bestbuy-0118/5496600_sb.jpg",
+      "categoryId": 2,
+      "brandId": 3,
+      "freeShipping": false,
+      "rating": 4.3,
+      "reviewCount": 189,
+      "sku": "SAMSUNG-S24-001",
+      "stock": 25
+    },
+    {
+      "id": 4,
+      "name": "Sony WH-1000XM5",
+      "description": "Tai nghe không dây với noise cancelling tốt nhất",
+      "price": 399.99,
+      "imageUrl": "https://cdn-demo.algolia.com/bestbuy-0118/4743301_sb.jpg",
+      "categoryId": 3,
+      "brandId": 4,
+      "freeShipping": true,
+      "rating": 4.7,
+      "reviewCount": 342,
+      "sku": "SONY-WH-1000XM5",
+      "stock": 50
+    },
+    {
+      "id": 5,
+      "name": "iPad Pro 12.9",
+      "description": "Máy tính bảng mạnh mẽ cho sáng tạo và công việc",
+      "price": 1099.99,
+      "imageUrl": "https://cdn-demo.algolia.com/bestbuy-0118/4604702_sb.jpg",
+      "categoryId": 4,
+      "brandId": 2,
+      "freeShipping": true,
+      "rating": 4.6,
+      "reviewCount": 213,
+      "sku": "APPLE-IPAD-12",
+      "stock": 20
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "slug": "laptop"
+    },
+    {
+      "id": 2,
+      "name": "Điện thoại",
+      "slug": "dien-thoai"
+    },
+    {
+      "id": 3,
+      "name": "Phụ kiện",
+      "slug": "phu-kien"
+    },
+    {
+      "id": 4,
+      "name": "Máy tính bảng",
+      "slug": "may-tinh-bang"
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Dell",
+      "logo": "/logos/dell.png"
+    },
+    {
+      "id": 2,
+      "name": "Apple",
+      "logo": "/logos/apple.png"
+    },
+    {
+      "id": 3,
+      "name": "Samsung",
+      "logo": "/logos/samsung.png"
+    },
+    {
+      "id": 4,
+      "name": "Sony",
+      "logo": "/logos/sony.png"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "e-commerce",
+  "description": "Nuxt 4 e-commerce scaffold with TypeScript support, Tailwind CSS styling, json-server for mock API, Prisma for database integration, and dev scripts for development and database management",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "dev:db": "json-server --watch db.json --port 3001",
+    "dev:full": "concurrently \"npm run dev\" \"npm run dev:db\"",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "seed": "node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "dotenv": "^17.2.3",
+    "lucide-vue-next": "^0.562.0",
+    "nuxt": "^4.2.2",
+    "nuxt-icon": "^1.0.0-beta.7",
+    "pg": "^8.16.3",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@types/node": "^25.0.3",
+    "@types/pg": "^8.16.0",
+    "autoprefixer": "^10.4.23",
+    "concurrently": "^9.2.1",
+    "json-server": "^1.0.0-beta.3",
+    "postcss": "^8.5.6",
+    "prisma": "^7.2.0",
+    "tailwindcss": "^3.4.19"
+  }
+}
