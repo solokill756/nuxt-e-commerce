@@ -40,15 +40,13 @@
 </template>
 
 <script setup lang="ts">
-import { useSearch } from '~/composables/useSearch';
 import { Search } from 'lucide-vue-next';
+import type { ProductType } from '~/types/productType';
 
-const { searchQuery, results } = useSearch();
+interface Props {
+  searchQuery: { query: string };
+  results: { data: ProductType[]; error: string };
+}
 
-watch(
-  () => results.value,
-  (newResults) => {
-    console.log('🔍 SearchHeader - Results updated:', newResults.data);
-  }
-);
+const props = defineProps<Props>();
 </script>

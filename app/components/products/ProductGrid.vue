@@ -81,6 +81,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { Star } from 'lucide-vue-next';
 import type { CategoryType } from '~/types/categoryType';
 import type { ProductType } from '~/types/productType';
@@ -91,11 +92,13 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-const products = props.products;
-const categories = props.categories || [];
+const products = computed(() => props.products);
+const categories = computed(() => props.categories || []);
 
 const getCategoryName = (categoryId: number) => {
-  return categories.find((c) => Number(c.id) === categoryId)?.name || 'Product';
+  return (
+    categories.value.find((c) => Number(c.id) === categoryId)?.name || 'Product'
+  );
 };
 </script>
 
