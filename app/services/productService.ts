@@ -8,6 +8,19 @@ export class ProductService {
     this.apiBase = apiBase;
   }
 
+  sortProducts(products: ProductType[], sortBy: string): ProductType[] {
+    switch (sortBy) {
+      case 'featured':
+        return products;
+      case 'price-high':
+        return products.sort((a, b) => b.price - a.price);
+      case 'price-low':
+        return products.sort((a, b) => a.price - b.price);
+      default:
+        return products;
+    }
+  }
+
   searchProducts(params: SearchParams, products: ProductType[]): ProductType[] {
     try {
       const filteredProducts = products.filter((product) => {
@@ -41,6 +54,7 @@ export class ProductService {
 
         return isMatch;
       });
+
       return filteredProducts;
     } catch (error) {
       console.error('Error searching products:', error);
