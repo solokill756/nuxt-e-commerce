@@ -1,7 +1,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
+  components: { dirs: ['~/components'] },
+  imports: { dirs: ['~/composables', '~/utils'] },
   runtimeConfig: {
     public: {
       urlBackend:

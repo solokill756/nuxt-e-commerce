@@ -5,4 +5,5 @@ export interface CategoryType {
   name: string;
   products: ProductType[];
   slug: string;
+  subcategories?: CategoryType[];
 }
