@@ -225,6 +225,41 @@
       "id": 4,
       "name": "Sony",
       "logo": "/logos/sony.png"
+    },
+    {
+      "id": 5,
+      "name": "Insignia™",
+      "logo": "/logos/insignia.png"
+    },
+    {
+      "id": 6,
+      "name": "Metra",
+      "logo": "/logos/metra.png"
+    },
+    {
+      "id": 7,
+      "name": "HP",
+      "logo": "/logos/hp.png"
+    },
+    {
+      "id": 8,
+      "name": "Canon",
+      "logo": "/logos/canon.png"
+    },
+    {
+      "id": 9,
+      "name": "OtterBox",
+      "logo": "/logos/otterbox.png"
+    },
+    {
+      "id": 10,
+      "name": "Incipio",
+      "logo": "/logos/incipio.png"
+    },
+    {
+      "id": 11,
+      "name": "Speck",
+      "logo": "/logos/speck.png"
     }
   ]
 }

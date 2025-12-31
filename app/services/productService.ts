@@ -8,11 +8,23 @@ export class ProductService {
     this.apiBase = apiBase;
   }
 
+  sortProducts(products: ProductType[], sortBy: string): ProductType[] {
+    switch (sortBy) {
+      case 'featured':
+        return products;
+      case 'price-high':
+        return products.sort((a, b) => b.price - a.price);
+      case 'price-low':
+        return products.sort((a, b) => a.price - b.price);
+      default:
+        return products;
+    }
+  }
+
   searchProducts(params: SearchParams, products: ProductType[]): ProductType[] {
     try {
       const filteredProducts = products.filter((product) => {
         let isMatch = true;
-
         if (params.query) {
           const queryLower = params.query.toLowerCase();
           isMatch =
@@ -20,11 +32,11 @@ export class ProductService {
             (product.name.toLowerCase().includes(queryLower) ||
               product.description.toLowerCase().includes(queryLower));
         }
-        if (params.category) {
-          isMatch = isMatch && product.categoryId === Number(params.category);
+        if (params.categoryId) {
+          isMatch = isMatch && product.categoryId === Number(params.categoryId);
         }
-        if (params.brand) {
-          isMatch = isMatch && product.brandId === Number(params.brand);
+        if (params.brandIds && params.brandIds.length > 0) {
+          isMatch = isMatch && params.brandIds.includes(product.brandId);
         }
         if (params.minPrice !== undefined) {
           isMatch = isMatch && product.price >= params.minPrice;
@@ -33,7 +45,7 @@ export class ProductService {
           isMatch = isMatch && product.price <= params.maxPrice;
         }
         if (params.rating !== undefined) {
-          isMatch = isMatch && product.rating >= params.rating;
+          isMatch = isMatch && Math.round(product.rating) === params.rating;
         }
         if (params.freeShipping !== undefined) {
           isMatch = isMatch && product.freeShipping === params.freeShipping;
@@ -41,6 +53,7 @@ export class ProductService {
 
         return isMatch;
       });
+
       return filteredProducts;
     } catch (error) {
       console.error('Error searching products:', error);

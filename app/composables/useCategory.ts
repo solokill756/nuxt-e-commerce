@@ -12,10 +12,10 @@ export const useCategory = () => {
     isLoading.value = true;
     try {
       const cats = await categoryService.getCategories();
-      console.log('Fetched categories:', cats);
+
       results.value = { data: cats, error: '' };
-    } catch (error) {
-      console.error('Error fetching categories:', error);
+    } catch (error: any) {
+      console.error('Error fetching categories:', error.statusText || error);
       results.value = { data: [], error: 'Failed to fetch categories' };
     } finally {
       isLoading.value = false;

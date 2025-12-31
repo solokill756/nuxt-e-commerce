@@ -1,9 +1,9 @@
 export interface SearchParams {
   query: string;
-  category?: string;
+  categoryId?: number;
   minPrice?: number;
   maxPrice?: number;
-  brand?: string;
+  brandIds?: number[];
   rating?: number;
   freeShipping?: boolean;
   page?: number;

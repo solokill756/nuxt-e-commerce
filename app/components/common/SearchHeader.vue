@@ -45,7 +45,7 @@ import type { ProductType } from '~/types/productType';
 
 interface Props {
   searchQuery: { query: string };
-  results: { data: ProductType[]; error: string };
+  results: { data?: ProductType[]; error: string; displayData: ProductType[] };
 }
 
 const props = defineProps<Props>();
