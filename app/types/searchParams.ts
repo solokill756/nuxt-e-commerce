@@ -6,4 +6,6 @@ export interface SearchParams {
   brand?: string;
   rating?: number;
   freeShipping?: boolean;
+  page?: number;
+  pageSize?: number;
 }
